@@ -140,6 +140,9 @@
   "node_modules/myStyle/assets/js/pages/ui/animations.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

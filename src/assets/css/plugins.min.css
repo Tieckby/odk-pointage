@@ -641,13 +641,13 @@
     animation: am-moving-dashes 1s linear infinite
 }
 
-@ -webkit-keyframes am-moving-dashes {
+@-webkit-keyframes am-moving-dashes {
     100% {
         stroke-dashoffset: -31px
     }
 }
 
-@ keyframes am-moving-dashes {
+@keyframes am-moving-dashes {
     100% {
         stroke-dashoffset: -31px
     }
@@ -658,7 +658,7 @@
     animation: am-pulsating 1s ease-out infinite
 }
 
-@ -webkit-keyframes am-pulsating {
+@-webkit-keyframes am-pulsating {
     0% {
         stroke-opacity: 1;
         stroke-width: 0
@@ -669,7 +669,7 @@
     }
 }
 
-@ keyframes am-pulsating {
+@keyframes am-pulsating {
     0% {
         stroke-opacity: 1;
         stroke-width: 0
@@ -702,7 +702,7 @@
     animation: am-draw 40s
 }
 
-@ -webkit-keyframes am-draw {
+@-webkit-keyframes am-draw {
     0% {
         stroke-dashoffset: 500%
     }
@@ -711,7 +711,7 @@
     }
 }
 
-@ keyframes am-draw {
+@keyframes am-draw {
     0% {
         stroke-dashoffset: 500%
     }
@@ -737,13 +737,13 @@
     animation: am-moving-dashes 1s linear infinite
 }
 
-@ -webkit-keyframes am-moving-dashes {
+@-webkit-keyframes am-moving-dashes {
     100% {
         stroke-dashoffset: -28px
     }
 }
 
-@ keyframes am-moving-dashes {
+@keyframes am-moving-dashes {
     100% {
         stroke-dashoffset: -28px
     }
