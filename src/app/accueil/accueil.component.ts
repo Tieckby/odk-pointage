@@ -24,27 +24,12 @@ userRole:any;
     }
     if(localStorage["userRole"]){
       this.userRole=JSON.parse(localStorage["userRole"]);
+      console.log("kkkkkkkkkkkkk"+this.userRole)
     }
+    
   }
-
-  listAdmins(){
-    this.router.navigate(['/listAdmins']);
-  }
-
-  listUsers(){
-    this.router.navigate(['/listUsers']);
-  }
-
-  listPointage(){
-    this.router.navigate(['/listPointage']);
-  }
-
-  log(){
-    this.router.navigate(['/log']);
-  }
-
   logOut(){
     localStorage.removeItem('isLogin');
-    this.router.navigate(['/login']);
-  }
+  this.router.navigateByUrl('/');
+}
 }
