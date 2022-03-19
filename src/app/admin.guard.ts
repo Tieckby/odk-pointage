@@ -19,9 +19,7 @@ export class AdminGuard implements CanActivate {
       let userRole =localStorage["userRole"];
       console.log("treyrwefgrker"+userRole);
       if(userRole == 1 || userRole == 2 ){
-       // location.replace("/accueil");
         return true;
-      
       }
       
       this.router.navigate(["/userSpace"]);

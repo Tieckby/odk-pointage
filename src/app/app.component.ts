@@ -33,8 +33,6 @@ userRole:any;
   logOut(){
       localStorage.removeItem('isLogin');
       localStorage.removeItem('loginStatus')
-      location.replace("/");
-
-
+      this.route.navigate(["/login"]);
   }
 }
