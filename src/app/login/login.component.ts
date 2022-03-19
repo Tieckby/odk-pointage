@@ -37,7 +37,7 @@ loginInfo:any;
             this.router.navigate(["/userSpace"]);
           }else {
             this.toast.error("Login ou mot de passe incorrect");
-            this.router.navigate(["/login"])
+            this.router.navigate(["/login"]);
             let loginStatus = false;
             localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
           }
