@@ -22,20 +22,19 @@ loginInfo:any;
       if(res){
         this.loginInfo = res;
         let loginStatus = true
-        location.replace("/accueil");
         localStorage.setItem('isLogin', JSON.stringify(this.loginInfo));
         localStorage.setItem('userRole', JSON.stringify(this.loginInfo.profile.id));
         localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
+        this.router.navigate(["/accueil"]);
       }else{
         this.service.login2(form.value["username"],form.value["password"]).subscribe((res)=>{
           if(res){
             this.loginInfo = res;
             let loginStatus = true
-            location.replace("/userSpace");
             localStorage.setItem('isLogin', JSON.stringify(this.loginInfo));
             localStorage.setItem('userRole', JSON.stringify(this.loginInfo.Type));
             localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
-
+            this.router.navigate(["/userSpace"]);
           }else {
             this.toast.error("Login ou mot de passe incorrect");
             this.router.navigate(["/login"])
