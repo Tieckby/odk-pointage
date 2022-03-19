@@ -36,7 +36,7 @@ import { CorbeilleComponent } from './corbeille/corbeille.component';
 
 
 const routes: Routes = [
-  { path: 'accueil', component: AccueilComponent, canActivate:[AdminGuard]},
+  { path: 'accueil', component: AccueilComponent,canActivate:[AdminGuard]},
   { path: 'login',component: LoginComponent,canActivate:[LoginGuard]},
   { path: 'listUsers',component:ListUsersComponent,canActivate:[AdminGuard]},
   { path: 'addUsers', component:AddUsersComponent,canActivate:[AdminGuard]},

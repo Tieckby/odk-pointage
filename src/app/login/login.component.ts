@@ -18,31 +18,40 @@ loginInfo:any;
   }
   
   onLogin(form :NgForm){
-    this.service.login1(form.value["username"],form.value["password"]).subscribe((res)=>{
+    this.service.login1(form.value["username"],form.value["password"]).subscribe((res: any)=>{
       if(res){
+
+        console.log(res);
         this.loginInfo = res;
         let loginStatus = true
+        //this.router.navigate(["/accueil"]);
+        location.replace("/accueil");
         localStorage.setItem('isLogin', JSON.stringify(this.loginInfo));
         localStorage.setItem('userRole', JSON.stringify(this.loginInfo.profile.id));
         localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
-        this.router.navigate(["/accueil"]);
       }else{
-        this.service.login2(form.value["username"],form.value["password"]).subscribe((res)=>{
+        this.service.login2(form.value["username"],form.value["password"]).subscribe((res: any)=>{
           if(res){
+            console.log(res);
             this.loginInfo = res;
             let loginStatus = true
+            //this.router.navigate(["/userSpace"]);
+            location.replace("/userSpace");
             localStorage.setItem('isLogin', JSON.stringify(this.loginInfo));
             localStorage.setItem('userRole', JSON.stringify(this.loginInfo.Type));
             localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
-            this.router.navigate(["/userSpace"]);
+
           }else {
             this.toast.error("Login ou mot de passe incorrect");
-            this.router.navigate(["/login"]);
+            this.router.navigate(["/login"])
             let loginStatus = false;
             localStorage.setItem('loginStatus', JSON.stringify(loginStatus));
-          }
-        },
-      error=>{
+            console.log("login non connecter");
+          
+        } 
+        
+      }, 
+      (error: any)=>{
         this.toast.error(error);
       }
       )

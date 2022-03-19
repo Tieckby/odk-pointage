@@ -8,7 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class UsersService {
 
-  url = environment.url;  
+  url=environment.url;
+  
 
   constructor(
     private http : HttpClient)
